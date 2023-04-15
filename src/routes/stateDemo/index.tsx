@@ -1,4 +1,4 @@
-import { component$, useSignal, useStore } from '@builder.io/qwik';
+import { component$, useSignal, useStore, $ } from '@builder.io/qwik';
 
 export default component$(() => {
 
@@ -12,15 +12,25 @@ export default component$(() => {
         { id: 3, name: "product4", price: 400, quantity: 40 }
     ])
 
+    const text1 = useSignal("")
+
+    const handlSubmit = $( data => {
+        console.log({data})
+    })
+
     return (
         <div>
+            <form preventdefault:submit onSubmit$={handlSubmit}>
             <div>
                 My name is {fullName.fname} {fullName.lname}
             </div>
+            <input value={text1.value} type="text" onInput$={(event) => text1.value = (event.target as HTMLInputElement).value} />
             {products.map((product) => <p key={product.id} > {product.name} </p>)}
 
             <button onClick$={() => fullName.fname = "Rajat"} >Change me</button>
-
+            <p>{text1}</p>
+            <button type="submit">Submit</button>
+            </form>
         </div>
 
     );
