@@ -18,8 +18,8 @@ export default component$(() => {
         <Slot />
       </main>
       <div class="section dark">
-        <div class="container">
-          <Footer />
+        <div class="container text-center">
+        <footer class=" text-white ">@copyright mentor vikash 2023</footer>
         </div>
       </div>
     </div>

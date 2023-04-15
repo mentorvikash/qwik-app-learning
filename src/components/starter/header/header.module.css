@@ -1,36 +1,22 @@
-.header {
+header > nav > ul{
   display: flex;
-  align-items: center;
-  padding: 20px 10px 0;
+  justify-content: start ;
+  width: 50%;
+  gap: 2rem ;
 }
 
-.header .logo a {
-  display: inline-block;
+header > nav > ul > li {
+  background-color: azure;
+  color: black;
+  padding: 3px;
+  border: 1px white solid;
+  border-radius: 6px;
 }
 
-.header ul {
-  margin: 0;
-  list-style: none;
-  flex: 1;
-  text-align: right;
+header > nav > ul > li:hover{
+  background-color: gray;
 }
 
-.header li {
-  display: none;
-  margin: 0;
-  padding: 0;
-}
-
-.header li a {
-  color: white;
-  display: inline-block;
-  padding: 0 1em;
-  text-decoration: none;
-}
-
-.header li a:hover {
-  color: var(--qwik-dark-purple);
-}
 
 @media (min-width: 450px) {
   .header li {
