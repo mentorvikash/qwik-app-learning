@@ -10,6 +10,7 @@ module.exports = () => {
     for (let i=0; i < 100; i++) {        
         
         data.products.push({
+            id: i + 1,
             name: faker.animal.bird(),
             price: ((Math.random() * 100) + 1)
         });
